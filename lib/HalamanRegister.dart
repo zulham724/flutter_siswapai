@@ -1,3 +1,5 @@
+import 'package:androidflutter/main.dart';
+import 'package:androidflutter/setting.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:androidflutter/Beranda.dart';
@@ -70,7 +72,7 @@ class HalamanRegister extends StatelessWidget {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
-                                Text(" Nama Lengkap",
+                                Text("Nama Lengkap",
                                     style: TextStyle(
                                       fontSize: 16,
                                     )),
@@ -90,7 +92,7 @@ class HalamanRegister extends StatelessWidget {
                                 SizedBox(
                                   height: 10.0,
                                 ),
-                                Text(" Email",
+                                Text("Email",
                                     style: TextStyle(
                                       fontSize: 16,
                                     )),
@@ -102,7 +104,7 @@ class HalamanRegister extends StatelessWidget {
                                   child: TextField(
                                     keyboardType: TextInputType.emailAddress,
                                     decoration: new InputDecoration(
-                                        hintText: "email",
+                                        hintText: "Email",
                                         border: OutlineInputBorder(),
                                         contentPadding: EdgeInsets.fromLTRB(
                                             10.0, 2.0, 5.0, 2.0)),
@@ -111,7 +113,7 @@ class HalamanRegister extends StatelessWidget {
                                 SizedBox(
                                   height: 10.0,
                                 ),
-                                Text(" Kata Sandi",
+                                Text("Kata Sandi",
                                     style: TextStyle(
                                       fontSize: 16,
                                     )),
@@ -132,7 +134,7 @@ class HalamanRegister extends StatelessWidget {
                                 SizedBox(
                                   height: 10.0,
                                 ),
-                                Text(" Konfirmasi Kata Sandi",
+                                Text("Konfirmasi Kata Sandi",
                                     style: TextStyle(
                                       fontSize: 16,
                                     )),
@@ -167,7 +169,19 @@ class HalamanRegister extends StatelessWidget {
                             ),
                             onPressed: () => Get.to(() => BerandaPage()),
                           ),
-                        ],
+                          Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        GestureDetector(
+                            child: Text("Saya sudah punya akun",
+                                style: TextStyle(
+                                    decoration: TextDecoration.underline,
+                                    fontSize: 16,
+                                    color: Colors.black)),
+                            onTap: () => Get.to(() => HalamanLogin)),
+                      ],
+                    )
+                  ],
                       ),
                     ),
                   ],
