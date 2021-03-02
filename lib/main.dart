@@ -68,7 +68,7 @@ class HalamanLogin extends StatelessWidget {
                         children: <Widget>[
                           Container(
                             padding: EdgeInsets.only(top: 5.0),
-                            child: Text("Registrasi",
+                            child: Text("Selamat Datang!",
                                 style: TextStyle(fontSize: 28)),
                           ),
                           SizedBox(
