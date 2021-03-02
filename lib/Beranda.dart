@@ -1,17 +1,13 @@
-import 'package:androidflutter/HalamanRegister.dart';
 import 'package:flutter/material.dart';
 import 'package:androidflutter/Kotak.dart';
 import 'package:get/get.dart';
 import 'package:androidflutter/Peringkat.dart';
 import 'package:androidflutter/Analisis.dart';
-import 'package:androidflutter/Permen.dart';
 
 class BerandaPage extends StatelessWidget {
-  @override
   final List<Widget> quis = List<Widget>.generate(5, (i) => new Kotak());
   final List<Widget> lives = List<Widget>.generate(5, (i) => new Live());
-  final List<Widget> tantangan =
-      List<Widget>.generate(5, (i) => new Tantangan());
+  final List<Widget> tantangan = List<Widget>.generate(5, (i) => new Tantangan());
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -32,7 +28,8 @@ class BerandaPage extends StatelessWidget {
           children: <Widget>[
             Row(
               children: <Widget>[
-                Container(
+                //Menu paling atas, menu Profile Picture
+                Container( //Profile Picture
                   height: 60.0,
                   width: 60.0,
                   decoration: BoxDecoration(
@@ -83,45 +80,35 @@ class BerandaPage extends StatelessWidget {
             SizedBox(
               height: 20.0,
             ),
-            Row(
+            //Break antara "Profile Picture" dengan "Peringkat-Analisis-Permen-Kelas Murid"
+            Row( 
               children: <Widget>[
-                Container(
-                  height: 35.0,
-                  width: 77.0,
+                Container( //Menu Peringkat
+                  height: 70.0,
+                  width: 70.0,
                   child: RaisedButton(
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18.0),
+                      borderRadius: BorderRadius.circular(10.0),
                     ),
-                    onPressed: () => Get.to(() => Peringkat(),
-                        transition: Transition.leftToRight),
-                    color: Colors.teal,
-                    textColor: Colors.white,
-                    child: Text("Peringkat", style: TextStyle(fontSize: 14)),
-                  ),
-                ),
-                SizedBox(
-                  width: 10.0,
-                ),
-                Container(
-                  height: 35.0,
-                  width: 77.0,
-                  child: RaisedButton(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18.0),
-                    ),
-                    onPressed: () => Get.to(() => Analisis()),
+                    onPressed: () => Get.to(() => Peringkat()),
                     color: Colors.teal,
                     textColor: Colors.white,
                     child: Row(
                       children: <Widget>[
-                        Container(
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage('assets/images/pp_laki.png'),
-                            ),
-                          ),
+                        GestureDetector(
+                      
+                      child: Container(
+                        width: 35.0,
+                        height: 45.0,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image:
+                                  AssetImage("assets/images/beranda_peringkat.png"),
+                              fit: BoxFit.cover),
+                          borderRadius: BorderRadius.circular(1.0),
                         ),
-                        Text("Analisis")
+                      ),
+                      onTap: () {}),
                       ],
                     ),
                   ),
@@ -129,26 +116,76 @@ class BerandaPage extends StatelessWidget {
                 SizedBox(
                   width: 10.0,
                 ),
-                Container(
-                  height: 35.0,
-                  width: 77.0,
+
+                Container( //Menu Analisis
+                  height: 70.0,
+                  width: 70.0,
                   child: RaisedButton(
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18.0),
+                      borderRadius: BorderRadius.circular(10.0),
                     ),
-                    onPressed: () => Get.to(
-                      () => Permen(),
-                      transition: Transition.upToDown,
-                    ),
+                    onPressed: () => Get.to(() => Analisis()),
                     color: Colors.teal,
                     textColor: Colors.white,
-                    child: Text("Permen", style: TextStyle(fontSize: 14)),
+                    child: Row(
+                      children: <Widget>[
+                        GestureDetector(
+                      
+                      child: Container(
+                        width: 35.0,
+                        height: 45.0,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image:
+                                  AssetImage("assets/images/beranda_analisis.png"),
+                              fit: BoxFit.cover),
+                          borderRadius: BorderRadius.circular(1.0),
+                        ),
+                      ),
+                      onTap: () {}),
+                      ],
+                    ),
                   ),
                 ),
                 SizedBox(
                   width: 10.0,
                 ),
-                Container(
+
+                Container( //Menu Permen
+                 height: 70.0,
+                  width: 70.0,
+                  child: RaisedButton(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    onPressed: () => Get.to(() => Analisis()),
+                    color: Colors.teal,
+                    textColor: Colors.white,
+                    child: Row(
+                      children: <Widget>[
+                        GestureDetector(
+                      
+                      child: Container(
+                        width: 35.0,
+                        height: 40.0,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image:
+                                  AssetImage("assets/images/beranda_permen.png"),
+                              fit: BoxFit.cover),
+                          borderRadius: BorderRadius.circular(0.1),
+                        ),
+                      ),
+                      onTap: () {}),
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: 10.0,
+                ),
+
+                Container( //Menu "Kelas Murid"
                   height: 35.0,
                   width: 77.0,
                   child: RaisedButton(
@@ -167,17 +204,18 @@ class BerandaPage extends StatelessWidget {
             SizedBox(
               height: 10.0,
             ),
-            Container(
+            //Break antara "Peringkat-Analisis-Permen-Kelas Murid" dengan "Menu Card"
+            Container( //Menu Card-Card
               child: Row(
                 children: <Widget>[
                   GestureDetector(
-                      child: Container(
-                        width: 165.0,
+                      child: Container( //Card Kerjakan Soal
+                        width: 180.0,
                         height: 80.0,
                         decoration: BoxDecoration(
                           image: DecorationImage(
                               image:
-                                  AssetImage("assets/images/Card-kerjakan.png"),
+                                  AssetImage("assets/images/card_kerjakan.png"),
                               fit: BoxFit.cover),
                           borderRadius: BorderRadius.circular(10.0),
                         ),
@@ -187,13 +225,13 @@ class BerandaPage extends StatelessWidget {
                     width: 10.0,
                   ),
                   GestureDetector(
-                      child: Container(
-                        width: 165.0,
+                      child: Container(//Card Latihan Mandiri
+                        width: 180.0,
                         height: 80.0,
                         decoration: BoxDecoration(
                           image: DecorationImage(
                               image: AssetImage(
-                                  "assets/images/Card-Latihan Mandiri.png"),
+                                  "assets/images/card_latihan_mandiri.png"),
                               fit: BoxFit.cover),
                           borderRadius: BorderRadius.circular(10.0),
                         ),
@@ -205,17 +243,18 @@ class BerandaPage extends StatelessWidget {
             SizedBox(
               height: 10.0,
             ),
+
             Container(
               child: Row(
                 children: <Widget>[
                   GestureDetector(
-                      child: Container(
-                        width: 165.0,
+                      child: Container(//Card Diskusi
+                        width: 180.0,
                         height: 80.0,
                         decoration: BoxDecoration(
                           image: DecorationImage(
                               image:
-                                  AssetImage("assets/images/Menu Diskusi.png"),
+                                  AssetImage("assets/images/card_diskusi.png"),
                               fit: BoxFit.cover),
                           borderRadius: BorderRadius.circular(10.0),
                         ),
@@ -224,25 +263,34 @@ class BerandaPage extends StatelessWidget {
                   SizedBox(
                     width: 10.0,
                   ),
+                  
                   GestureDetector(
-                      child: Container(
-                        width: 165.0,
+                      child: Container(//Card Materi
+                        width: 180.0,
                         height: 80.0,
                         decoration: BoxDecoration(
                           image: DecorationImage(
                               image:
-                                  AssetImage("assets/images/Card-Materi.png"),
+                                  AssetImage("assets/images/card_materi.png"),
                               fit: BoxFit.cover),
                           borderRadius: BorderRadius.circular(10.0),
                         ),
                       ),
                       onTap: () {}),
+                  
+                  SizedBox(
+                    width: 10.0,
+                  ),
+                      
                 ],
               ),
             ),
             SizedBox(
               height: 10.0,
             ),
+
+//Break antara "Menu Card" dengan "Menu Lanjutkan"
+
             Container(
                 child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
