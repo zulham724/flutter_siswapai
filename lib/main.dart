@@ -56,12 +56,14 @@ class HalamanLogin extends StatelessWidget {
                     topRight: Radius.circular(30),
                   ),
                 ),
+               
                 child: Column(
                   children: <Widget>[
                     Container(
                       padding: EdgeInsets.only(top: 5.0),
-                      child: Text("Hello!", style: TextStyle(fontSize: 30)),
+                      child: Text("Selamat Datang!", style: TextStyle(fontSize: 30)),
                     ),
+
                     TextFormField(
                       keyboardType: TextInputType.emailAddress,
                       decoration: InputDecoration(labelText: "Email"),
