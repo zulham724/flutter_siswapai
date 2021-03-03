@@ -19,28 +19,55 @@ class Kotak extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Container(
+                
                 margin: EdgeInsets.only(left: 0.0),
-                child: Text("Asd23sdd"),
+                child: 
+                Text(
+                  "asd123",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(color: Colors.black, fontSize: 14.0),
+                ),
+                
                 decoration: BoxDecoration(
                     color: Colors.teal[100],
+                    
                     borderRadius: BorderRadius.circular(10.0)),
                 width: 120.0,
                 height: 30.0,
               ),
               SizedBox(
-                height: 10.0,
+                height: .0,
               ),
+
               Text(
-                "Penilaian UAS Semester Ganjil",
-                style: TextStyle(color: Colors.grey[300]),
-              ),
+                  "Penyelesaian UAS Semester Ganjil",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(color: Colors.white, fontSize: 12.0),
+                ),
               SizedBox(
-                height: 20.0,
+                height: 4.0,
               ),
-              Text(
-                "Waktu Pengerjaan Sedang Berjalan",
-                style: TextStyle(color: Colors.red[300], fontSize: 12.0),
-              ),
+              Column(
+              children: <Widget>[
+               SizedBox(
+                  height: 30.0,
+                  child: Image(
+                    image: AssetImage('assets/images/stopwatch.png'),
+                  ),
+                ),
+                SizedBox(
+                  height: 10.0,
+                ),
+                Text(
+                  "Tes masih berlangsung",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(color: Colors.white, fontSize: 10.0),
+                ),
+                SizedBox(
+                  height: 10.0,
+                ),
+              ],
+            )
             ],
           ),
           onPressed: () {},
@@ -71,10 +98,11 @@ class Tantangan extends StatelessWidget {
             ),
             child: Column(
               children: <Widget>[
+                
                 Text(
                   "Menyelesaikan 3 Paket Soal (2/3)",
                   textAlign: TextAlign.center,
-                  style: TextStyle(color: Colors.white, fontSize: 14.0),
+                  style: TextStyle(color: Colors.white, fontSize: 12.0),
                 ),
                 SizedBox(
                   height: 50.0,

@@ -1,8 +1,7 @@
-import 'package:androidflutter/Kotak.dart';
 import 'package:flutter/material.dart';
+import 'Kotak.dart';
 
 class Peringkat extends StatelessWidget {
-  @override
   final List<Widget> box = List<Widget>.generate(10, (i) => new BoxPeringkat());
   Widget build(BuildContext context) {
     return SafeArea(
@@ -19,7 +18,7 @@ class Peringkat extends StatelessWidget {
               Container(
                 padding: EdgeInsets.only(left: 20.0, right: 20.0),
                 height: 94.0,
-                width: 360.0,
+                width: 500.0,
                 decoration: BoxDecoration(
                     color: Colors.teal,
                     borderRadius: BorderRadius.only(
@@ -42,7 +41,7 @@ class Peringkat extends StatelessWidget {
                       width: 10.0,
                     ),
                     Container(
-                      height: 90.0,
+                      height: 100.0,
                       width: 250.0,
                       margin: EdgeInsets.only(top: 18.0),
                       child: Column(
@@ -94,7 +93,8 @@ class Peringkat extends StatelessWidget {
                                     color: Colors.grey,
                                   ),
                                   child: DropdownButton<String>(
-                                    items: <String>['A', 'B', 'C', 'D']
+                                    items: <String>
+                                    ['A', 'B', 'C', 'D']
                                         .map((String value) {
                                       return new DropdownMenuItem<String>(
                                         value: value,

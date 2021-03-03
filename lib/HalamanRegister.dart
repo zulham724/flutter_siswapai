@@ -1,8 +1,8 @@
-import 'package:androidflutter/main.dart';
-import 'package:androidflutter/setting.dart';
+import 'package:androidflutter/Beranda.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:androidflutter/Beranda.dart';
+
+import 'main.dart';
 
 class HalamanRegister extends StatelessWidget {
   @override
