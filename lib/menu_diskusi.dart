@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'Kotak.dart';
 
-class MenuMateri extends StatelessWidget {
+class MenuDiskusi extends StatelessWidget {
   final List<Widget> box = List<Widget>.generate(10, (i) => new BoxPeringkat());
   Widget build(BuildContext context) {
     return SafeArea(
@@ -30,7 +30,7 @@ class MenuMateri extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(60.0),
                         image: DecorationImage(
-                          image: AssetImage('assets/images/ikon_materi.png'),
+                          image: AssetImage('assets/images/ikon_diskusi.png'),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -46,12 +46,12 @@ class MenuMateri extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Text(
-                            "Materi",
+                            "Ruang Diskusi",
                             style:
-                                TextStyle(fontSize: 25.0, color: Colors.teal)
+                                TextStyle(fontSize: 25.0, color: Colors.white),
                           ),
                           SizedBox(
-                            height: 0,
+                            height: 5.0,
                           ),
                           ],
                       ),
@@ -62,61 +62,29 @@ class MenuMateri extends StatelessWidget {
               Container(
                 margin: EdgeInsets.only(
                     left: 30.0, right: 30.0, top: 15.0, bottom: 15.0),
-                child: Row(
+                child: 
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  mainAxisSize: MainAxisSize.max,
                   children: [
                     Text(
-                      "Materi yang telah disediakan sekolah",
+                      "Forum diskusi",
                       style: TextStyle(fontSize: 16.0, color: Colors.grey[600]),
                     ),
-                    
+                    Text(
+                      "Diskusi Anda",
+                      style: TextStyle(color: Colors.grey[700]),
+                    )
                   ],
                 ),
               ),
-             Container( //Menu Card-Card
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    mainAxisSize: MainAxisSize.max,
-                    
-                  children: <Widget>[
-                      GestureDetector(
-                          child: Container( //Card Modul
-                          width: 350.0,
-                          height: 200.0,
-                          
-                          decoration: BoxDecoration(
-                            
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/card_modul.png"),
-                                fit: BoxFit.cover),
-                                borderRadius: BorderRadius.circular(10.0),
-                                      ),
-                                    ),
-                          onTap: () {}),
-                          SizedBox(
-                            width: 10.0,),
-                            
-                      
-                              ],
-                            ),
-                          ),
-                          SizedBox(
-                            height: 30.0,
-                          ),
-              
-              Container(
-                    child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    mainAxisSize: MainAxisSize.max,
-
-                  children: <Widget>[
-                      GestureDetector(
-                          child: Container( //Card Modul
-                          width: 350.0,
-                          height: 200.0,
+      
+                          Container(
+                            child: Row(
+                              children: <Widget>[
+                                GestureDetector(
+                                    child: Container(//Card Media Pembelajaran
+                          width: 250.0,
+                          height: 80.0,
                                       decoration: BoxDecoration(
                                         image: DecorationImage(
                                             image:
@@ -129,8 +97,6 @@ class MenuMateri extends StatelessWidget {
                                 SizedBox(
                                   width: 10.0,
                                 ),
-                                
-                                                                  
                               ],
                             ),
                           ),

@@ -1,7 +1,6 @@
 import 'package:androidflutter/Beranda.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import 'main.dart';
 
 class HalamanRegister extends StatelessWidget {
@@ -169,16 +168,20 @@ class HalamanRegister extends StatelessWidget {
                             ),
                             onPressed: () => Get.to(() => BerandaPage()),
                           ),
+                                                          SizedBox(
+                                  height: 5.0,
+                                ),
                           Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
+                        
                         GestureDetector(
                             child: Text("Saya sudah punya akun",
                                 style: TextStyle(
                                     decoration: TextDecoration.underline,
                                     fontSize: 16,
                                     color: Colors.black)),
-                            onTap: () => Get.to(() => HalamanLogin)),
+                            onTap: () => Get.to(() => main())),
                       ],
                     )
                   ],

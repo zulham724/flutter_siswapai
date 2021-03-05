@@ -18,7 +18,7 @@ class Permen extends StatelessWidget {
                   width: 60.0,
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage('assets/images/permenn.png'))),
+                          image: AssetImage('assets/images/ikon_permen.png'))),
                 ),
                 Text("300 Permen")
               ]),

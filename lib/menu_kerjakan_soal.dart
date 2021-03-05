@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'Kotak.dart';
+import 'menu_materi.dart';
 
-class MenuMateri extends StatelessWidget {
+class MenuKerjakanSoal extends StatelessWidget {
   final List<Widget> box = List<Widget>.generate(10, (i) => new BoxPeringkat());
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.yellow[800],
+          backgroundColor: Colors.indigo[800],
         ),
         body: Container(
           child: Column(
@@ -18,19 +20,20 @@ class MenuMateri extends StatelessWidget {
                 height: 94.0,
                 width: 500.0,
                 decoration: BoxDecoration(
-                    color: Colors.yellow[800],
+                    color: Colors.indigo[800],
                     borderRadius: BorderRadius.only(
                         bottomRight: Radius.circular(20.0),
                         bottomLeft: Radius.circular(20.0))),
                 child: Row(
                   children: <Widget>[
+
                     Container(
-                      height: 60.0,
+                      height: 65.0,
                       width: 60.0,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(60.0),
                         image: DecorationImage(
-                          image: AssetImage('assets/images/ikon_materi.png'),
+                          image: AssetImage('assets/images/ikon_kerjakan_soal.png'),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -39,54 +42,93 @@ class MenuMateri extends StatelessWidget {
                       width: 10.0,
                     ),
                     Container(
-                      height: 100.0,
-                      width: 250.0,
-                      margin: EdgeInsets.only(top: 18.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Text(
-                            "Materi",
-                            style:
-                                TextStyle(fontSize: 25.0, color: Colors.teal)
-                          ),
-                          SizedBox(
-                            height: 0,
-                          ),
-                          ],
-                      ),
-                    ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Kerjakan soal",
+                      style: TextStyle(fontSize: 20.0, color: Colors.white),
+                    )
+                  ],
+                ),
+              ),
                   ],
                 ),
               ),
               Container(
                 margin: EdgeInsets.only(
                     left: 30.0, right: 30.0, top: 15.0, bottom: 15.0),
-                child: Row(
+                child: 
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  mainAxisSize: MainAxisSize.max,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisSize: MainAxisSize.max,
                   children: [
                     Text(
-                      "Materi yang telah disediakan sekolah",
+                      "Belum Selesai",
                       style: TextStyle(fontSize: 16.0, color: Colors.grey[600]),
                     ),
-                    
+                    Text(
+                      "Selesai",
+                      style: TextStyle(fontSize: 16.0, color: Colors.grey[600]),
+                    )
                   ],
                 ),
               ),
+              
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisSize: MainAxisSize.max,
+              children: <Widget>[
+                
+                Container( //Menu Peringkat
+                          width: 200.0,
+                          height: 100.0,
+                  child: RaisedButton(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15.0)),
+                    onPressed: () => Get.to(() => MenuMateri()),
+                    color: Colors.teal,
+                    textColor: Colors.white,
+                    child: Row(
+                          children: [
+                          Image.asset("assets/images/ikon_add.png"),
+                          Text("Tambah Paket Soal",
+                            style: TextStyle(
+                                fontSize: 10.0, color: Colors.white),
+                          ),
+                        ],
+                      ),
+                  ),
+                ),
+                SizedBox(
+                  width: 50.0,
+                ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 10.0,
+                          ),
+                          //Break antara "Peringkat-Analisis-Permen-Kelas Murid" dengan "Menu Card"
+
              Container( //Menu Card-Card
-                  child: Row(
+                  child: 
+                  Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     mainAxisSize: MainAxisSize.max,
                     
                   children: <Widget>[
+                    
                       GestureDetector(
-                          child: Container( //Card Modul
+                          child: 
+                          Container( //Card Modul
                           width: 350.0,
-                          height: 200.0,
+                          height: 100.0,
                           
-                          decoration: BoxDecoration(
+                          decoration: 
+                          BoxDecoration(
                             
                             image: DecorationImage(
                                 image: AssetImage("assets/images/card_modul.png"),
@@ -116,7 +158,7 @@ class MenuMateri extends StatelessWidget {
                       GestureDetector(
                           child: Container( //Card Modul
                           width: 350.0,
-                          height: 200.0,
+                          height: 100.0,
                                       decoration: BoxDecoration(
                                         image: DecorationImage(
                                             image:

@@ -52,7 +52,7 @@ class Kotak extends StatelessWidget {
                SizedBox(
                   height: 30.0,
                   child: Image(
-                    image: AssetImage('assets/images/stopwatch.png'),
+                    image: AssetImage('assets/images/ikon_stopwatch.png'),
                   ),
                 ),
                 SizedBox(
@@ -107,7 +107,7 @@ class Tantangan extends StatelessWidget {
                 SizedBox(
                   height: 50.0,
                   child: Image(
-                    image: AssetImage('assets/images/piala.png'),
+                    image: AssetImage('assets/images/ikon_piala.png'),
                   ),
                 ),
                 SizedBox(

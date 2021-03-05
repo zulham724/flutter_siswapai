@@ -1,32 +1,52 @@
-import 'package:androidflutter/Peringkat.dart';
-import 'package:androidflutter/menu_materi.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'Analisis.dart';
 import 'Kotak.dart';
+import "menu_materi.dart";
+import "menu_kerjakan_soal.dart";
+import "main_drawer.dart";
+import "nav-drawer.dart";
 
+// ignore: unused_element
+class _BelajarNavigationDrawerState extends State<BelajarNavigationDrawer> {
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+ _BelajarNavigationDrawerState createState() => _BelajarNavigationDrawerState();
+  
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      key: _scaffoldKey,
+      appBar: AppBar(
+        leading: new IconButton(
+          icon: new Icon(Icons.menu),
+          onPressed: () => _scaffoldKey.currentState.openDrawer(),
+        ),
+        title: Text("Menu Beranda"),
+      ),
+    );
+  }
+}
 class BerandaPage extends StatelessWidget {
   final List<Widget> quis = List<Widget>.generate(5, (i) => new Kotak());
   final List<Widget> lives = List<Widget>.generate(5, (i) => new Live());
   final List<Widget> tantangan = List<Widget>.generate(5, (i) => new Tantangan());
 
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        leading: IconButton(
-            icon: Icon(Icons.menu),
-            onPressed: () {
-              Navigator.of(context).pop();
-            }),
-        iconTheme: IconThemeData(
-          color: Colors.teal, //change your color here
+    var _scaffoldKey;
+        return Scaffold(
+          appBar: AppBar(
+    backgroundColor: Colors.teal,
+            leading: new IconButton(
+              icon: new Icon(Icons.menu),
+              onPressed: () => _scaffoldKey.currentState.openDrawer(),
         ),
       ),
+      drawer: DrawerWidget(),
+
       body: SingleChildScrollView(
         padding: EdgeInsets.only(left: 10.0, right: 10.0, top: 10.0),
         
-        child: Column(
+        child: 
+        Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Row(
@@ -61,7 +81,7 @@ class BerandaPage extends StatelessWidget {
                         style: TextStyle(fontSize: 20.0),),
                       Row(
                         children: [
-                          Image.asset("assets/images/piala_kuning.png"),
+                          Image.asset("assets/images/ikon_piala_kuning.png"),
                           Text(
                             "100 pts",
                                 style: TextStyle(
@@ -78,6 +98,7 @@ class BerandaPage extends StatelessWidget {
               height: 20.0,
             ),
             //Break antara "Profile Picture" dengan "Peringkat-Analisis-Permen-Kelas Murid"
+            
             Row( 
               children: <Widget>[
                 
@@ -87,12 +108,12 @@ class BerandaPage extends StatelessWidget {
                   child: RaisedButton(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15.0)),
-                    onPressed: () => Get.to(() => menu_materi()),
+                    onPressed: () => Get.to(() => MenuMateri()),
                     color: Colors.teal,
                     textColor: Colors.white,
                     child: Row(
                           children: [
-                          Image.asset("assets/images/piala_kuning.png"),
+                          Image.asset("assets/images/ikon_piala_kuning.png"),
                           Text("Peringkat",
                             style: TextStyle(
                                 fontSize: 10.0, color: Colors.white),
@@ -111,12 +132,12 @@ class BerandaPage extends StatelessWidget {
                   child: RaisedButton(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15.0)),
-                    onPressed: () => Get.to(() => Analisis()),
+                    onPressed: () => Get.to(() => MenuKerjakanSoal()),
                     color: Colors.teal,
                     textColor: Colors.white,
                     child: Row(
                         children: [
-                          Image.asset("assets/images/analisis.png", 
+                          Image.asset("assets/images/beranda_analisis.png", 
                           width: 30, height: 30, ), 
                           
                           Text(
@@ -367,6 +388,7 @@ class BerandaPage extends StatelessWidget {
                   );
                 }
 
+  // ignore: non_constant_identifier_names
   menu_materi() {}
 
 }
