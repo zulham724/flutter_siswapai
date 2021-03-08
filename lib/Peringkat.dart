@@ -68,7 +68,7 @@ class Peringkat extends StatelessWidget {
                                 decoration: BoxDecoration(
                                     image: DecorationImage(
                                         image: AssetImage(
-                                            'assets/images/piala_kuning.png'))),
+                                            'assets/images/ikon_piala_kuning.png'))),
                               ),
                               SizedBox(
                                 width: 5.0,

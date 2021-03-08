@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import './analisis.dart' as email;
 import './peringkat.dart' as music;
+import './menu_kerjakan_soal.dart' as shopping;
+import './menu_diskusi.dart' as telepon;
 
 void main(){
   runApp(new MaterialApp(
@@ -23,7 +25,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   @override
   
   void initState(){
-    controller = new TabController(vsync: this, length: 2);
+    controller = new TabController(vsync: this, length: 4);
     //tambahkan SingleTickerProviderStateMikin pada class _HomeState
     super.initState();
   }
@@ -41,14 +43,15 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
         //warna background
         backgroundColor: Colors.lightGreen,
          //judul
-         title: new Text("Tampilan Home"),
+         title: new Text("Tampilan Home "),
            //bottom
            bottom: new TabBar(
              controller: controller,
              tabs: <Widget>[
-              new Tab(icon: new Icon(Icons.email),),
-              new Tab(icon: new Icon(Icons.queue_music),),
-
+              new Tab(icon: new Icon(Icons.email),text: "Email",),
+              new Tab(icon: new Icon(Icons.queue_music),text: "Music",),
+              new Tab(icon: new Icon(Icons.shopping_cart),text: "Shop",),
+              new Tab(icon: new Icon(Icons.phone_android),text: "Phone",), 
              ],
         ),
       ),
@@ -62,6 +65,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
           //kemudian panggil halaman sesuai tab yang sudah dibuat
           new email.Analisis(),
           new music.Peringkat(),
+          new shopping.MenuKerjakanSoal(),
+          new telepon.MenuDiskusi()
         ],
       ),
     );

@@ -153,7 +153,7 @@ class Live extends StatelessWidget {
                 SizedBox(
                   height: 65.0,
                   child: Image(
-                    image: AssetImage('assets/images/live1.png'),
+                    image: AssetImage('assets/images/ikon_live1.png'),
                   ),
                 ),
                 SizedBox(

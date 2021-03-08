@@ -30,7 +30,7 @@ class Analisis extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(60.0),
                         image: DecorationImage(
-                          image: AssetImage('assets/images/analisis.png'),
+                          image: AssetImage('assets/images/beranda_analisis.png'),
                           fit: BoxFit.cover,
                         ),
                       ),

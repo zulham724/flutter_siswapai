@@ -181,7 +181,7 @@ class HalamanRegister extends StatelessWidget {
                                     decoration: TextDecoration.underline,
                                     fontSize: 16,
                                     color: Colors.black)),
-                            onTap: () => Get.to(() => main())),
+                            onTap: () => Get.to(() => HalamanLogin())),
                       ],
                     )
                   ],

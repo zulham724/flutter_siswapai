@@ -1,9 +1,12 @@
+import 'package:androidflutter/Analisis.dart';
+import 'package:androidflutter/menu_tab_diskusi.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'Kotak.dart';
 import "menu_materi.dart";
 import "menu_kerjakan_soal.dart";
 import "main_drawer.dart";
+import 'menu_tab_controller.dart';
 import "nav-drawer.dart";
 
 // ignore: unused_element
@@ -34,7 +37,7 @@ class BerandaPage extends StatelessWidget {
     var _scaffoldKey;
         return Scaffold(
           appBar: AppBar(
-    backgroundColor: Colors.teal,
+            backgroundColor: Colors.teal,
             leading: new IconButton(
               icon: new Icon(Icons.menu),
               onPressed: () => _scaffoldKey.currentState.openDrawer(),
@@ -108,7 +111,7 @@ class BerandaPage extends StatelessWidget {
                   child: RaisedButton(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15.0)),
-                    onPressed: () => Get.to(() => MenuMateri()),
+                    onPressed: () => Get.to(() => TabDiskusi()),
                     color: Colors.teal,
                     textColor: Colors.white,
                     child: Row(

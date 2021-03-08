@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import './analisis.dart' as email;
 import './peringkat.dart' as music;
 

@@ -1,7 +1,7 @@
-import 'package:androidflutter/Beranda.dart';
-import 'package:androidflutter/PengaturanAkun.dart';
-import 'package:androidflutter/menu_diskusi.dart';
-import 'package:androidflutter/menu_kerjakan_soal.dart';
+import 'Beranda.dart';
+import 'PengaturanAkun.dart';
+import 'menu_diskusi.dart';
+import 'menu_kerjakan_soal.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 // ignore: unused_import
@@ -61,7 +61,7 @@ class DrawerWidget extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     
                         children: [
-                          Image.asset("assets/images/sign_out.png", 
+                          Image.asset("assets/images/ikon_sign_out.png", 
                           width: 40, height: 40, ), 
                           
                           Text(
