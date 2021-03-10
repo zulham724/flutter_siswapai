@@ -1,13 +1,10 @@
-import 'package:androidflutter/Analisis.dart';
-import 'package:androidflutter/menu_tab_diskusi.dart';
+import 'package:androidflutter/menu_diskusi_diskusi_anda.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'Kotak.dart';
-import "menu_materi.dart";
-import "menu_kerjakan_soal.dart";
 import "main_drawer.dart";
-import 'menu_tab_controller.dart';
 import "nav-drawer.dart";
+import "menu_kerjakan_soal.dart";
 
 // ignore: unused_element
 class _BelajarNavigationDrawerState extends State<BelajarNavigationDrawer> {
@@ -111,7 +108,7 @@ class BerandaPage extends StatelessWidget {
                   child: RaisedButton(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15.0)),
-                    onPressed: () => Get.to(() => TabDiskusi()),
+                    onPressed: () => Get.to(() => MenuDiskusi()),
                     color: Colors.teal,
                     textColor: Colors.white,
                     child: Row(

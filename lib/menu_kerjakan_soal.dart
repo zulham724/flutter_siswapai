@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import './analisis.dart' as email;
-import './peringkat.dart' as music;
+import 'menu_kerjakan_soal_belom_selesai.dart' as menu1;
+import './peringkat.dart' as menu2;
 
 void main(){
   runApp(new MaterialApp(
@@ -12,10 +12,10 @@ void main(){
 
 class  Home extends StatefulWidget {
   @override
-  _HomeState createState() => _HomeState();
+  MenuKerjakanSoal createState() => MenuKerjakanSoal();
 }
 
-class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
+class MenuKerjakanSoal extends State<Home> with SingleTickerProviderStateMixin {
 
   //create controller untuk tabBar
   TabController controller;
@@ -60,8 +60,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
         controller: controller,
         children: <Widget>[
           //kemudian panggil halaman sesuai tab yang sudah dibuat
-          new email.Analisis(),
-          new music.Peringkat(),
+          new menu1.MenuKerjakanSoalBelomSelesai(),
+          new menu2.Peringkat(),
         ],
       ),
     );

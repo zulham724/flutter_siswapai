@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'Kotak.dart';
 import 'menu_materi.dart';
 
-class MenuKerjakanSoal extends StatelessWidget {
+class MenuKerjakanSoalBelomSelesai extends StatelessWidget {
   final List<Widget> box = List<Widget>.generate(10, (i) => new BoxPeringkat());
   Widget build(BuildContext context) {
     return SafeArea(
