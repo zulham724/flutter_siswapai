@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'Kotak.dart';
 
-class MenuDiskusi extends StatelessWidget {
+// ignore: camel_case_types
+class MenuDiskusi_ForumDiskusi extends StatelessWidget {
   final List<Widget> box = List<Widget>.generate(10, (i) => new BoxPeringkat());
   Widget build(BuildContext context) {
     return SafeArea(

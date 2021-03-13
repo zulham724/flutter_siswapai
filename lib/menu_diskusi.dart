@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
-import './analisis.dart' as email;
-import './peringkat.dart' as music;
+import 'menu_diskusi_forum_diskusi.dart' as menu1;
+import 'menu_diskusi_diskusi_anda.dart' as menu2;
 
 void main(){
   runApp(new MaterialApp(
@@ -12,10 +11,10 @@ void main(){
 
 class  Home extends StatefulWidget {
   @override
-  _HomeState createState() => _HomeState();
+  MenuDiskusi createState() => MenuDiskusi();
 }
 
-class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
+class MenuDiskusi extends State<Home> with SingleTickerProviderStateMixin {
 
   //create controller untuk tabBar
   TabController controller;
@@ -60,8 +59,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
         controller: controller,
         children: <Widget>[
           //kemudian panggil halaman sesuai tab yang sudah dibuat
-          new email.Analisis(),
-          new music.Peringkat(),
+          new menu1.MenuDiskusi_ForumDiskusi(),
+          new menu2.MenuDiskusi_DiskusiAnda(),
         ],
       ),
     );

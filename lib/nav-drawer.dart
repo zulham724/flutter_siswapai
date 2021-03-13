@@ -1,12 +1,14 @@
+import 'package:androidflutter/menu_diskusi.dart';
+import 'package:androidflutter/menu_kerjakan_soal.dart';
+import 'package:androidflutter/menu_materi.dart';
+
+import 'Analisis.dart';
 import 'Beranda.dart';
 import 'PengaturanAkun.dart';
-import 'menu_diskusi.dart';
-import 'menu_kerjakan_soal.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 // ignore: unused_import
 import "main.dart";
-import 'menu_materi.dart';
 
 class DrawerWidget extends StatelessWidget {
   @override
@@ -53,7 +55,7 @@ class DrawerWidget extends StatelessWidget {
                     
                     shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0)),
-                    onPressed: () => Get.to(() => MenuKerjakanSoal()),
+                    onPressed: () => Get.to(() => Analisis()),
                     color: Colors.teal,
                     textColor: Colors.white,
                     child: Row(

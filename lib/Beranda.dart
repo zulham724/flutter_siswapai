@@ -1,10 +1,11 @@
-import 'package:androidflutter/menu_diskusi_diskusi_anda.dart';
+import 'Analisis.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'Kotak.dart';
 import "main_drawer.dart";
+import 'menu_diskusi.dart';
 import "nav-drawer.dart";
-import "menu_kerjakan_soal.dart";
+import 'menu_kerjakan_soal.dart';
 
 // ignore: unused_element
 class _BelajarNavigationDrawerState extends State<BelajarNavigationDrawer> {
@@ -132,7 +133,7 @@ class BerandaPage extends StatelessWidget {
                   child: RaisedButton(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15.0)),
-                    onPressed: () => Get.to(() => MenuKerjakanSoal()),
+                    onPressed: () => Get.to(() => Analisis()),
                     color: Colors.teal,
                     textColor: Colors.white,
                     child: Row(
@@ -164,6 +165,7 @@ class BerandaPage extends StatelessWidget {
                       color: Colors.white,
                       textColor: Colors.teal,
                       child: Row(
+
                         children: [
                           Image.asset("assets/images/beranda_kelas.png", 
                           width: 30, height: 30, ), 
@@ -173,7 +175,9 @@ class BerandaPage extends StatelessWidget {
                                 style: TextStyle(
                                 fontSize: 10.0, color: Colors.black),
                           ),
+
                         ],
+
                       ),
                                 ),
                               ),
@@ -198,7 +202,7 @@ class BerandaPage extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(10.0),
                                       ),
                                     ),
-                          onTap: () {}),
+                          onTap: () => Get.to(() => MenuKerjakanSoal())),
                           SizedBox(
                             width: 10.0,),
                       GestureDetector(
@@ -212,7 +216,7 @@ class BerandaPage extends StatelessWidget {
                                         borderRadius: BorderRadius.circular(10.0),
                                       ),
                                     ),
-                                    onTap: () {}),
+                          onTap: () => Get.to(() => MenuKerjakanSoal())),
                               ],
                             ),
                           ),
@@ -235,7 +239,7 @@ class BerandaPage extends StatelessWidget {
                                         borderRadius: BorderRadius.circular(10.0),
                                       ),
                                     ),
-                                    onTap: () {}),
+                                    onTap: () => Get.to(() => MenuKerjakanSoal())),
                                 SizedBox(
                                   width: 10.0,
                                 ),
@@ -252,7 +256,7 @@ class BerandaPage extends StatelessWidget {
                                         borderRadius: BorderRadius.circular(10.0),
                                       ),
                                     ),
-                                    onTap: () {}),
+                                    onTap: () => Get.to(() => MenuKerjakanSoal())),
                                 
                                 SizedBox(
                                   width: 10.0,

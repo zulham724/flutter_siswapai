@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'Kotak.dart';
+import 'menu_kerjakan_soal.dart';
 
 class MenuMateri extends StatelessWidget {
   final List<Widget> box = List<Widget>.generate(10, (i) => new BoxPeringkat());
@@ -94,7 +96,7 @@ class MenuMateri extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(10.0),
                                       ),
                                     ),
-                          onTap: () {}),
+                      onTap: () => Get.to(() => MenuKerjakanSoal())),
                           SizedBox(
                             width: 10.0,),
                             
@@ -108,11 +110,12 @@ class MenuMateri extends StatelessWidget {
               
               Container(
                     child: Row(
+
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     mainAxisSize: MainAxisSize.max,
 
-                  children: <Widget>[
+                    children: <Widget>[
                       GestureDetector(
                           child: Container( //Card Modul
                           width: 350.0,
@@ -129,7 +132,7 @@ class MenuMateri extends StatelessWidget {
                                 SizedBox(
                                   width: 10.0,
                                 ),
-                                
+
                                                                   
                               ],
                             ),

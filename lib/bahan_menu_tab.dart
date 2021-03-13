@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import './analisis.dart' as email;
 import './peringkat.dart' as music;
-import './menu_kerjakan_soal.dart' as shopping;
-import './menu_diskusi.dart' as telepon;
+import './peringkat.dart' as shopping;
+import './peringkat.dart' as telepon;
 
 void main(){
   runApp(new MaterialApp(
@@ -65,8 +65,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
           //kemudian panggil halaman sesuai tab yang sudah dibuat
           new email.Analisis(),
           new music.Peringkat(),
-          new shopping.MenuKerjakanSoal(),
-          new telepon.MenuDiskusi()
+          new shopping.Peringkat(),
+          new telepon.Peringkat()
         ],
       ),
     );

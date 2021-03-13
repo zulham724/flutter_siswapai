@@ -20,8 +20,8 @@ class Analisis extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: Colors.teal,
                     borderRadius: BorderRadius.only(
-                        bottomRight: Radius.circular(20.0),
-                        bottomLeft: Radius.circular(20.0))),
+                        bottomRight: Radius.circular(0.0),
+                        bottomLeft: Radius.circular(0.0))),
                 child: Row(
                   children: <Widget>[
                     Container(

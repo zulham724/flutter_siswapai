@@ -11,10 +11,10 @@ void main(){
 
 class  Home extends StatefulWidget {
   @override
-  _HomeState createState() => _HomeState();
+  _MenuLatMandiri createState() => _MenuLatMandiri();
 }
 
-class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
+class _MenuLatMandiri extends State<Home> with SingleTickerProviderStateMixin {
 
   //create controller untuk tabBar
   TabController controller;
