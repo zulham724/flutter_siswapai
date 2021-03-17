@@ -123,6 +123,7 @@ class HalamanLogin extends StatelessWidget {
                               ],
                             ),
                           ),
+                          
                           RaisedButton(
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(20)),
