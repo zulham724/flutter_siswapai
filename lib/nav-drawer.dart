@@ -8,7 +8,7 @@ import 'PengaturanAkun.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 // ignore: unused_import
-import "main.dart";
+import 'main.dart';
 
 class DrawerWidget extends StatelessWidget {
   @override

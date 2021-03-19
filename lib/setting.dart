@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:androidflutter/main.dart';
+import 'main.dart';
 
 class Setting extends StatelessWidget {
   @override
