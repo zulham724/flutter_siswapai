@@ -1,16 +1,13 @@
 import 'package:androidflutter/Beranda.dart';
-import 'package:androidflutter/setting.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:androidflutter/HalamanRegister.dart';
 
 void main() {
-  runApp(GetMaterialApp(
-    home: HalamanLogin(),
+  runApp(MaterialApp(
+    home: PengaturanAkunPage(),
   ));
 }
-
-class HalamanLogin extends StatelessWidget {
+class PengaturanAkunPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,7 +65,7 @@ class HalamanLogin extends StatelessWidget {
                         children: <Widget>[
                           Container(
                             padding: EdgeInsets.only(top: 5.0),
-                            child: Text("Selamat Datang!",
+                            child: Text("Pengaturan Kata Sandi",
                                 style: TextStyle(fontSize: 28)),
                           ),
                           SizedBox(
@@ -78,7 +75,27 @@ class HalamanLogin extends StatelessWidget {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
-                             Text("Email",
+                                Text("Password Lama",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                    )),
+                                SizedBox(
+                                  height: 5.0,
+                                ),
+                                Container(
+                                  height: 35.0,
+                                  child: TextField(
+                                    decoration: new InputDecoration(
+                                        hintText: "Masukkan password lama anda...",
+                                        border: OutlineInputBorder(),
+                                        contentPadding: EdgeInsets.fromLTRB(
+                                            10.0, 2.0, 5.0, 2.0)),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 10.0,
+                                ),
+                                Text("Password Baru",
                                     style: TextStyle(
                                       fontSize: 16,
                                     )),
@@ -90,7 +107,7 @@ class HalamanLogin extends StatelessWidget {
                                   child: TextField(
                                     keyboardType: TextInputType.emailAddress,
                                     decoration: new InputDecoration(
-                                        hintText: "Email",
+                                        hintText: "Masukkan password lama anda...",
                                         border: OutlineInputBorder(),
                                         contentPadding: EdgeInsets.fromLTRB(
                                             10.0, 2.0, 5.0, 2.0)),
@@ -99,7 +116,7 @@ class HalamanLogin extends StatelessWidget {
                                 SizedBox(
                                   height: 10.0,
                                 ),
-                                Text("Kata Sandi",
+                                Text("Konfirmasi Password Baru",
                                     style: TextStyle(
                                       fontSize: 16,
                                     )),
@@ -111,7 +128,7 @@ class HalamanLogin extends StatelessWidget {
                                   child: TextField(
                                     obscureText: true,
                                     decoration: new InputDecoration(
-                                        hintText: "Kata Sandi",
+                                        hintText: "Konfirmasi password baru anda...",
                                         border: OutlineInputBorder(),
                                         contentPadding: EdgeInsets.fromLTRB(
                                             10.0, 2.0, 5.0, 2.0)),
@@ -128,33 +145,16 @@ class HalamanLogin extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(20)),
                             color: Colors.teal[200],
                             child: Text(
-                              "Daftar",
+                              "Simpan",
                               style:
                                   TextStyle(color: Colors.white, fontSize: 16),
                             ),
                             onPressed: () => Get.to(() => BerandaPage()),
                           ),
-                          Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        GestureDetector(
-                            child: Text("Belum punya akun?",
-                                style: TextStyle(
-                                    decoration: TextDecoration.underline,
-                                    fontSize: 16,
-                                    color: Colors.black)),
-                            onTap: () => Get.to(() => HalamanRegister())),
-                        GestureDetector(
-                          child: Text("Lupa Kata Sandi",
-                              style: TextStyle(
-                                decoration: TextDecoration.underline,
-                                fontSize: 16,
-                                color: Colors.black,)),
-                          onTap: () => Get.to(() => Setting()),
-                        ),
-                      ],
-                    )
-                  ],
+                                                          SizedBox(
+                                  height: 5.0,
+                                ),
+                          ],
                       ),
                     ),
                   ],

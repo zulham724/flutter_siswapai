@@ -1,16 +1,9 @@
 import 'package:androidflutter/Beranda.dart';
-import 'package:androidflutter/setting.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:androidflutter/HalamanRegister.dart';
+import 'main.dart';
 
-void main() {
-  runApp(GetMaterialApp(
-    home: HalamanLogin(),
-  ));
-}
-
-class HalamanLogin extends StatelessWidget {
+class HalamanRegister extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,7 +61,7 @@ class HalamanLogin extends StatelessWidget {
                         children: <Widget>[
                           Container(
                             padding: EdgeInsets.only(top: 5.0),
-                            child: Text("Selamat Datang!",
+                            child: Text("Registrasi",
                                 style: TextStyle(fontSize: 28)),
                           ),
                           SizedBox(
@@ -78,7 +71,27 @@ class HalamanLogin extends StatelessWidget {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
-                             Text("Email",
+                                Text("Nama Lengkap",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                    )),
+                                SizedBox(
+                                  height: 5.0,
+                                ),
+                                Container(
+                                  height: 35.0,
+                                  child: TextField(
+                                    decoration: new InputDecoration(
+                                        hintText: "Nama lengkap",
+                                        border: OutlineInputBorder(),
+                                        contentPadding: EdgeInsets.fromLTRB(
+                                            10.0, 2.0, 5.0, 2.0)),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 10.0,
+                                ),
+                                Text("Email",
                                     style: TextStyle(
                                       fontSize: 16,
                                     )),
@@ -120,6 +133,27 @@ class HalamanLogin extends StatelessWidget {
                                 SizedBox(
                                   height: 10.0,
                                 ),
+                                Text("Konfirmasi Kata Sandi",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                    )),
+                                SizedBox(
+                                  height: 5.0,
+                                ),
+                                Container(
+                                  height: 35.0,
+                                  child: TextField(
+                                    obscureText: true,
+                                    decoration: new InputDecoration(
+                                        hintText: "Konfirmasi Kata Sandi",
+                                        border: OutlineInputBorder(),
+                                        contentPadding: EdgeInsets.fromLTRB(
+                                            10.0, 2.0, 5.0, 2.0)),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 10.0,
+                                ),
                               ],
                             ),
                           ),
@@ -134,24 +168,20 @@ class HalamanLogin extends StatelessWidget {
                             ),
                             onPressed: () => Get.to(() => BerandaPage()),
                           ),
+                                                          SizedBox(
+                                  height: 5.0,
+                                ),
                           Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
+                        
                         GestureDetector(
-                            child: Text("Belum punya akun?",
+                            child: Text("Saya sudah punya akun",
                                 style: TextStyle(
                                     decoration: TextDecoration.underline,
                                     fontSize: 16,
                                     color: Colors.black)),
-                            onTap: () => Get.to(() => HalamanRegister())),
-                        GestureDetector(
-                          child: Text("Lupa Kata Sandi",
-                              style: TextStyle(
-                                decoration: TextDecoration.underline,
-                                fontSize: 16,
-                                color: Colors.black,)),
-                          onTap: () => Get.to(() => Setting()),
-                        ),
+                            onTap: () => Get.to(() => HalamanLogin())),
                       ],
                     )
                   ],
