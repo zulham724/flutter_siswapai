@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'Kotak.dart';
+import 'Komponen_kotak.dart';
 
-class MenuKerjakanSoal extends StatelessWidget {
+class MenuLatihanMandiriDikerjakan extends StatelessWidget {
   final List<Widget> box = List<Widget>.generate(10, (i) => new BoxPeringkat());
   Widget build(BuildContext context) {
     return SafeArea(

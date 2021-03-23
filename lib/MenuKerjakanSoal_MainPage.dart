@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'menu_kerjakan_soal_belom_selesai.dart' as menu1;
-import './peringkat.dart' as menu2;
+import 'MenuKerjakanSoal_MenuBelomSelesai.dart' as MenuKerjakanSoalBelomSelesai;
+import 'MenuKerjakanSoal_MenuUdhSelesai.dart' as MenuKerjakanSoalUdhSelesai;
 
 void main(){
   runApp(new MaterialApp(
@@ -12,10 +12,10 @@ void main(){
 
 class  Home extends StatefulWidget {
   @override
-  MenuKerjakanSoal createState() => MenuKerjakanSoal();
+  MenuKerjakanSoalMainPage createState() => MenuKerjakanSoalMainPage();
 }
 
-class MenuKerjakanSoal extends State<Home> with SingleTickerProviderStateMixin {
+class MenuKerjakanSoalMainPage extends State<Home> with SingleTickerProviderStateMixin {
 
   //create controller untuk tabBar
   TabController controller;
@@ -60,8 +60,8 @@ class MenuKerjakanSoal extends State<Home> with SingleTickerProviderStateMixin {
         controller: controller,
         children: <Widget>[
           //kemudian panggil halaman sesuai tab yang sudah dibuat
-          new menu1.MenuKerjakanSoalBelomSelesai(),
-          new menu2.Peringkat(),
+          new MenuKerjakanSoalBelomSelesai.MenuKerjakanSoalBelomSelesai(),
+          new MenuKerjakanSoalUdhSelesai.MenuKerjakanSoalUdhSelesai(),
         ],
       ),
     );

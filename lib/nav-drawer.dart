@@ -1,13 +1,11 @@
-import 'package:androidflutter/menu_diskusi.dart';
-import 'package:androidflutter/menu_kerjakan_soal.dart';
-import 'package:androidflutter/menu_materi.dart';
-
-import 'Analisis.dart';
-import 'Beranda.dart';
-import 'PengaturanAkun.dart';
+import 'MenuDiskusi_MainPage.dart';
+import 'MenuKerjakanSoal_MainPage.dart';
+import 'MenuMateri_MainPage.dart';
+import 'MenuAnalisis_MainPage.dart';
+import 'Menu_Beranda.dart';
+import 'Menu_PengaturanAkun.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-// ignore: unused_import
 import 'main.dart';
 
 class DrawerWidget extends StatelessWidget {
@@ -30,7 +28,7 @@ class DrawerWidget extends StatelessWidget {
           _drawerItem(
               icon: Icons.assignment,
               text: 'Kerjakan Soal',
-              onTap: () => Get.to(() => MenuKerjakanSoal())),
+              onTap: () => Get.to(() => MenuKerjakanSoalMainPage())),
           _drawerItem(
               icon: Icons.create,
               text: 'Latihan Mandiri',
@@ -38,7 +36,7 @@ class DrawerWidget extends StatelessWidget {
           _drawerItem(
               icon: Icons.book_rounded,
               text: 'Materi',
-              onTap: () => Get.to(() => MenuMateri())),
+              onTap: () => Get.to(() => MenuMateriMainPage())),
           _drawerItem(
               icon: Icons.chat,
               text: 'Diskusi',
@@ -55,7 +53,7 @@ class DrawerWidget extends StatelessWidget {
                     
                     shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0)),
-                    onPressed: () => Get.to(() => Analisis()),
+                    onPressed: () => Get.to(() => MenuAnalisisMainPage()),
                     color: Colors.teal,
                     textColor: Colors.white,
                     child: Row(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'menu_diskusi_forum_diskusi.dart' as menu1;
-import 'menu_diskusi_diskusi_anda.dart' as menu2;
+import 'MenuDiskusi_MenuForumDiskusi.dart' as ForumDiskusi;
+import 'MenuDiskusi_MenuDiskusiAnda.dart' as DiskusiAnda;
 
 void main(){
   runApp(new MaterialApp(
@@ -59,8 +59,8 @@ class MenuDiskusi extends State<Home> with SingleTickerProviderStateMixin {
         controller: controller,
         children: <Widget>[
           //kemudian panggil halaman sesuai tab yang sudah dibuat
-          new menu1.MenuDiskusi_ForumDiskusi(),
-          new menu2.MenuDiskusi_DiskusiAnda(),
+          new ForumDiskusi.MenuDiskusiForumDiskusi(),
+          new DiskusiAnda.MenuDiskusiDiskusiAnda(),
         ],
       ),
     );

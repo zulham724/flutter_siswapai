@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Kotak.dart';
+import 'Komponen_kotak.dart';
 
 class Peringkat extends StatelessWidget {
   final List<Widget> box = List<Widget>.generate(10, (i) => new BoxPeringkat());

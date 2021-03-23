@@ -1,9 +1,9 @@
-import 'package:androidflutter/Beranda.dart';
+import 'Menu_Beranda.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'main.dart';
+import 'Amain.dart';
 
-class HalamanRegister extends StatelessWidget {
+class MenuHalamanRegister extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

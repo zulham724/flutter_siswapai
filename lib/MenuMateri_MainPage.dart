@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'Kotak.dart';
-import 'menu_kerjakan_soal.dart';
+import 'Komponen_kotak.dart';
+import 'MenuKerjakanSoal_MainPage.dart';
 
-class MenuMateri extends StatelessWidget {
+class MenuMateriMainPage extends StatelessWidget {
   final List<Widget> box = List<Widget>.generate(10, (i) => new BoxPeringkat());
   Widget build(BuildContext context) {
     return SafeArea(
@@ -96,7 +96,7 @@ class MenuMateri extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(10.0),
                                       ),
                                     ),
-                      onTap: () => Get.to(() => MenuKerjakanSoal())),
+                      onTap: () => Get.to(() => MenuKerjakanSoalMainPage())),
                           SizedBox(
                             width: 10.0,),
                             
