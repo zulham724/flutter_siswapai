@@ -5,12 +5,13 @@ import 'Komponen_Kotak.dart';
 import 'main_drawer.dart';
 import 'MenuDiskusi_MainPage.dart';
 import 'MenuKerjakanSoal_MainPage.dart';
+import 'menu_dropdown.dart';
 
 // ignore: unused_element
 class _BelajarNavigationDrawerState extends State<BelajarNavigationDrawer> {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
  _BelajarNavigationDrawerState createState() => _BelajarNavigationDrawerState();
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,8 +24,12 @@ class _BelajarNavigationDrawerState extends State<BelajarNavigationDrawer> {
         title: Text("Menu Beranda"),
       ),
     );
+
+    
   }
+  
 }
+
 class BerandaPage extends StatelessWidget {
   final List<Widget> quis = List<Widget>.generate(5, (i) => new Kotak());
   final List<Widget> lives = List<Widget>.generate(5, (i) => new Live());
@@ -166,6 +171,7 @@ class BerandaPage extends StatelessWidget {
                       child: Row(
 
                         children: [
+
                           Image.asset("assets/images/beranda_kelas.png", 
                           width: 30, height: 30, ), 
                           
