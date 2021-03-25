@@ -33,7 +33,8 @@ class HalamanLogin extends StatelessWidget {
               ),
               Container(
                 padding: EdgeInsets.only(top: 2.0),
-                child: Text("SISWA PAI",
+                child: 
+                    Text("SISWA PAI", 
                     style: TextStyle(color: Colors.white, fontSize: 30)),
               ),
               Align(

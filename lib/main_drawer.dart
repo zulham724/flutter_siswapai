@@ -3,7 +3,6 @@ import 'nav-drawer.dart';
 
 void main() {
   runApp(MaterialApp(
-    title: "BelajarFlutter.com",
     home: BelajarNavigationDrawer(),
   ));
 }
