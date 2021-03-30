@@ -113,7 +113,7 @@ class BerandaPage extends StatelessWidget {
                   child: RaisedButton(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15.0)),
-                    onPressed: () => Get.to(() => MenuDiskusi()),
+                    onPressed: () => Get.to(() => MenuPeringkat()),
                     color: Colors.teal,
                     textColor: Colors.white,
                     child: Row(
@@ -244,7 +244,7 @@ class BerandaPage extends StatelessWidget {
                                         borderRadius: BorderRadius.circular(10.0),
                                       ),
                                     ),
-                                    onTap: () => Get.to(() => MenuKerjakanSoalMainPage())),
+                                    onTap: () => Get.to(() => MenuDiskusiMainPage())),
                                 SizedBox(
                                   width: 10.0,
                                 ),
@@ -261,7 +261,7 @@ class BerandaPage extends StatelessWidget {
                                         borderRadius: BorderRadius.circular(10.0),
                                       ),
                                     ),
-                                    onTap: () => Get.to(() => MenuKerjakanSoalMainPage())),
+                                    onTap: () => Get.to(() => MenuMateriMainPage())),
                                 
                                 SizedBox(
                                   width: 10.0,
