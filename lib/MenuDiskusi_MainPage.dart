@@ -45,8 +45,8 @@ class MenuDiskusi extends State<Home> with SingleTickerProviderStateMixin {
            bottom: new TabBar(
              controller: controller,
              tabs: <Widget>[
-              new Tab(icon: new Icon(Icons.email),),
-              new Tab(icon: new Icon(Icons.queue_music),),
+              new Tab(icon: new Icon(Icons.forum),), //Menu Diskusi_ForumDiskusi
+              new Tab(icon: new Icon(Icons.insert_comment),), //Menu Diskusi_DiskusiAnda
 
              ],
         ),

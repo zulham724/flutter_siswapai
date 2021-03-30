@@ -1,3 +1,6 @@
+import 'package:androidflutter/MenuMateri_MainPage.dart';
+import 'package:androidflutter/Menu_Peringkat.dart';
+
 import 'MenuAnalisis_MainPage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -5,7 +8,7 @@ import 'Komponen_Kotak.dart';
 import 'main_drawer.dart';
 import 'MenuDiskusi_MainPage.dart';
 import 'MenuKerjakanSoal_MainPage.dart';
-import 'menu_dropdown.dart';
+
 
 // ignore: unused_element
 class _BelajarNavigationDrawerState extends State<BelajarNavigationDrawer> {
@@ -113,7 +116,7 @@ class BerandaPage extends StatelessWidget {
                   child: RaisedButton(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15.0)),
-                    onPressed: () => Get.to(() => MenuPeringkat()),
+                    onPressed: () => Get.to(() => Peringkat()),
                     color: Colors.teal,
                     textColor: Colors.white,
                     child: Row(
@@ -244,7 +247,7 @@ class BerandaPage extends StatelessWidget {
                                         borderRadius: BorderRadius.circular(10.0),
                                       ),
                                     ),
-                                    onTap: () => Get.to(() => MenuDiskusiMainPage())),
+                                    onTap: () => Get.to(() => MenuDiskusi())),
                                 SizedBox(
                                   width: 10.0,
                                 ),

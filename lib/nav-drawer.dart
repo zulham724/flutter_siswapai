@@ -6,6 +6,7 @@ import 'Menu_Beranda.dart';
 import 'Menu_PengaturanAkun.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'MenuLatihanMandiri_MainPage.dart';
 
 
 class DrawerWidget extends StatelessWidget {
@@ -32,7 +33,7 @@ class DrawerWidget extends StatelessWidget {
           _drawerItem(
               icon: Icons.create,
               text: 'Latihan Mandiri',
-              onTap: () => print('Tap Trash menu')),
+              onTap: () => Get.to(() => MenuLatMandiri())),
           _drawerItem(
               icon: Icons.book_rounded,
               text: 'Materi',

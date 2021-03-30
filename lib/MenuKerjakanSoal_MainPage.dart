@@ -46,8 +46,8 @@ class MenuKerjakanSoalMainPage extends State<Home> with SingleTickerProviderStat
            bottom: new TabBar(
              controller: controller,
              tabs: <Widget>[
-              new Tab(icon: new Icon(Icons.email),),
-              new Tab(icon: new Icon(Icons.queue_music),),
+              new Tab(icon: new Icon(Icons.assignment),), //Menu Kerjakan Soal_Belum Selesai
+              new Tab(icon: new Icon(Icons.assignment_turned_in),), //Menu Kerjakan Soal_Udh Selesai
 
              ],
         ),
