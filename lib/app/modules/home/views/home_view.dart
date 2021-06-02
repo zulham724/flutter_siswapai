@@ -60,23 +60,43 @@ class HomeView extends GetView<HomeController> {
           children: [
             RaisedButton(
               onPressed: ()=>Get.to(()=> DiskusiKomentarView()),
-              child: Text('Halaman Diskusi Komentar'),
+              child: Text('Diskusi Komentar'),
             ),
             RaisedButton(
               onPressed: ()=>Get.to(()=> MateriView()),
-              child: Text('Halaman Materi'),
+              child: Text('Materi'),
             ),
             RaisedButton(
               onPressed: ()=>Get.to(()=>ModulArsipView()),
-              child: Text('Halaman Modul Arsip')
+              child: Text('Modul Arsip')
             ),
             RaisedButton(
               onPressed: ()=>Get.to(()=>NavigasiView()),
-              child: Text('Halaman Navigasi')
+              child: Text('Navigasi')
             ),
             RaisedButton(
               onPressed: ()=>Get.to(()=>NotifTidakadaView()),
-              child: Text('Halaman Notif - Tidak Ada')
+              child: Text('Notif - Tidak Ada')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>NotifAdaView()),
+              child: Text('Notif - Ada')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>PengaturanAkunView()),
+              child: Text('Pengaturan Akun')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>RegistrasiView()),
+              child: Text('Registrasi')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>ReviewsoalIsianBelumdinilaiView()),
+              child: Text('Review Soal-Isian-Belum Dinilai')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>SoalBelumdinilaiSetelahmengerjakanView()),
+              child: Text('Soal-Belum Dinilai-Setelah Mengerjakan Soal')
             ),
           ],
         ),

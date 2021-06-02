@@ -9,14 +9,12 @@ class SoalBelumdinilaiSetelahmengerjakanView
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('SoalBelumdinilaiSetelahmengerjakanView'),
-        centerTitle: true,
-      ),
-      body: Center(
-        child: Text(
-          'SoalBelumdinilaiSetelahmengerjakanView is working',
-          style: TextStyle(fontSize: 20),
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/bg-soal.png'),
+            fit: BoxFit.cover
+          )
         ),
       ),
     );

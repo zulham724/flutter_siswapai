@@ -25,5 +25,9 @@ flutter:
     - assets/images/list-modul.png
     - assets/images/bg.jpg
     - assets/images/notifikasi.png
+    - assets/images/agpaii-logo.png
+    - assets/images/gambar-login.png
+    - assets/images/Wave.png
+    - assets/bg-soal.png
   uses-material-design: true
 
