@@ -29,5 +29,11 @@ flutter:
     - assets/images/gambar-login.png
     - assets/images/Wave.png
     - assets/bg-soal.png
+    - assets/images/ikon_diskusi.png
+    - assets/images/Rank1.png
+    - assets/images/Rank2.png
+    - assets/images/Rank3.png
+    - assets/images/ikon_kerjakan_soal.png
+    - assets/images/list-latihanmandiri.png
   uses-material-design: true
 

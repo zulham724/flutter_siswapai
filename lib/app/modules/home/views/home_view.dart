@@ -98,6 +98,42 @@ class HomeView extends GetView<HomeController> {
               onPressed: ()=>Get.to(()=>SoalBelumdinilaiSetelahmengerjakanView()),
               child: Text('Soal-Belum Dinilai-Setelah Mengerjakan Soal')
             ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>SoalNilaibagusBukasoalView()),
+              child: Text('Soal-Nilai Bagus-Buka Soal')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>SoalNilaijelekSetelahmengerjakanView()),
+              child: Text('Soal-Nilai Jelek-Setelah Mengerjakan')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>ReviewsoalUraianUdahdinilaiView()),
+              child: Text('Review Soal-Uraian-Udah Dinilai')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>LoginView()),
+              child: Text('Login')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>ModulView()),
+              child: Text('Modul')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>DiskusiForumView()),
+              child: Text('Diskusi-Forum Diskusi')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>RankingView()),
+              child: Text('Ranking')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>LatihanmandiriBelumselesaiView()),
+              child: Text('Latihan Mandiri-Belum Selesai')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>LatihanmandiriSelesaiView()),
+              child: Text('Latihan Mandiri-Selesai')
+            ),
           ],
         ),
       ),
