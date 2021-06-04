@@ -35,5 +35,6 @@ flutter:
     - assets/images/Rank3.png
     - assets/images/ikon_kerjakan_soal.png
     - assets/images/list-latihanmandiri.png
+    - assets/images/list-kerjakansoal.png
   uses-material-design: true
 
