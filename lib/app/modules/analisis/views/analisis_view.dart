@@ -9,14 +9,13 @@ class AnalisisView extends GetView<AnalisisController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('AnalisisView'),
+        title: Text('Analisis'),
         centerTitle: true,
+        backgroundColor: Colors.teal,
+        elevation: 0,
       ),
       body: Center(
-        child: Text(
-          'AnalisisView is working',
-          style: TextStyle(fontSize: 20),
-        ),
+        
       ),
     );
   }

@@ -166,6 +166,26 @@ class HomeView extends GetView<HomeController> {
               onPressed: ()=>Get.to(()=>MasukanKodeSoalView()),
               child: Text('Masukan Kode Soal')
             ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>ProfilView()),
+              child: Text('Profil')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>DiskusiSuntingpertanyaanView()),
+              child: Text('Diskusi-Sunting Pertanyaan "50%"')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>SoalUraianView()),
+              child: Text('Soal Uraian')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>SoalIsianView()),
+              child: Text('Soal Isian')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>BerandaView()),
+              child: Text('Beranda')
+            ),
           ],
         ),
       ),
