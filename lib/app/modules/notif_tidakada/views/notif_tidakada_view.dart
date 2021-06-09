@@ -15,14 +15,63 @@ class NotifTidakadaView extends GetView<NotifTidakadaController> {
         elevation: 0,
       ),
       body: Center(
-        child: Container(
-          height: 150,
-          width: 150,
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('assets/images/notifikasi.png')
+        child: Column(
+          children: [
+            Container(
+              margin: EdgeInsets.only(top: 100),
+              height: 150,
+              width: 150,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/images/notifikasi.png')
+                ),
+              ),
             ),
-          ),
+            Container(
+              margin: EdgeInsets.only(top: 20),
+              child: Text(
+                'Belum Ada Pemberitahuan',
+                style: TextStyle(
+                  color: Colors.teal,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20
+                ),
+              ),
+            ),
+            Text(
+              'Kerjakan soal atau ikut diskusi agar kamu',
+              style: TextStyle(
+                fontSize: 17,
+                color: Colors.grey
+              ),
+            ),
+            Text(
+              'mendapatkan pemberitahuan',
+              style: TextStyle(
+                fontSize: 17,
+                color: Colors.grey
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 50),
+              height: 50,
+              width: 150,
+              child: RaisedButton(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30)
+                ),
+                child: Text(
+                  'Beranda',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20
+                  ),
+                ),
+                color: Colors.teal[600],
+                onPressed: (){},
+              ),
+            )
+          ],
         ),
       ),
     );

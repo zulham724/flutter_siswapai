@@ -7,8 +7,13 @@ environment:
 
 dependencies: 
   get_cli: ^1.5.0
+  pie_chart: ^5.0.0
+  fl_chart: ^0.36.1
   cupertino_icons: ^1.0.0
   get: 4.1.4
+  group_radio_button: ^1.1.0
+  charts_flutter: ^0.10.0
+  datetime_picker_formfield: ^2.0.0
   flutter: 
     sdk: flutter
 
@@ -22,8 +27,23 @@ flutter:
     - assets/images/pp_laki.png
     - assets/images/Card-Modul.png
     - assets/images/Card-Media.png
+    - assets/images/card_kerjakan.png
+    - assets/images/card_latihan_mandiri.png
+    - assets/images/card_diskusi.png
+    - assets/images/card_materi.png
     - assets/images/list-modul.png
     - assets/images/bg.jpg
     - assets/images/notifikasi.png
+    - assets/images/agpaii-logo.png
+    - assets/images/gambar-login.png
+    - assets/images/Wave.png
+    - assets/bg-soal.png
+    - assets/images/ikon_diskusi.png
+    - assets/images/Rank1.png
+    - assets/images/Rank2.png
+    - assets/images/Rank3.png
+    - assets/images/ikon_kerjakan_soal.png
+    - assets/images/list-latihanmandiri.png
+    - assets/images/list-kerjakansoal.png
   uses-material-design: true
 

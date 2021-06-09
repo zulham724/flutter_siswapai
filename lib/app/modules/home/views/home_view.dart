@@ -60,23 +60,177 @@ class HomeView extends GetView<HomeController> {
           children: [
             RaisedButton(
               onPressed: ()=>Get.to(()=> DiskusiKomentarView()),
-              child: Text('Halaman Diskusi Komentar'),
+              child: Text('Diskusi Komentar'),
             ),
             RaisedButton(
               onPressed: ()=>Get.to(()=> MateriView()),
-              child: Text('Halaman Materi'),
+              child: Text('Materi'),
             ),
             RaisedButton(
               onPressed: ()=>Get.to(()=>ModulArsipView()),
-              child: Text('Halaman Modul Arsip')
+              child: Text('Modul Arsip')
             ),
             RaisedButton(
               onPressed: ()=>Get.to(()=>NavigasiView()),
-              child: Text('Halaman Navigasi')
+              child: Text('Navigasi')
             ),
             RaisedButton(
               onPressed: ()=>Get.to(()=>NotifTidakadaView()),
-              child: Text('Halaman Notif - Tidak Ada')
+              child: Text('Notif - Tidak Ada')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>NotifAdaView()),
+              child: Text('Notif - Ada')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>PengaturanAkunView()),
+              child: Text('Pengaturan Akun')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>RegistrasiView()),
+              child: Text('Registrasi')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>ReviewsoalIsianBelumdinilaiView()),
+              child: Text('Review Soal-Isian-Belum Dinilai')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>SoalBelumdinilaiSetelahmengerjakanView()),
+              child: Text('Soal-Belum Dinilai-Setelah Mengerjakan Soal')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>SoalNilaibagusBukasoalView()),
+              child: Text('Soal-Nilai Bagus-Buka Soal')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>SoalNilaijelekSetelahmengerjakanView()),
+              child: Text('Soal-Nilai Jelek-Setelah Mengerjakan')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>ReviewsoalUraianUdahdinilaiView()),
+              child: Text('Review Soal-Uraian-Udah Dinilai')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>LoginView()),
+              child: Text('Login')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>ModulView()),
+              child: Text('Modul')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>DiskusiForumView()),
+              child: Text('Diskusi-Forum Diskusi')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>RankingView()),
+              child: Text('Ranking')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>LatihanmandiriBelumselesaiView()),
+              child: Text('Latihan Mandiri-Belum Selesai')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>LatihanmandiriSelesaiView()),
+              child: Text('Latihan Mandiri-Selesai')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>KerjakansoalBelumselesaiView()),
+              child: Text('Kerjakan soal-Belum selesai')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>KerjakansoalSelesaiView()),
+              child: Text('Kerjakan soal-Selesai')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>SoalMasukView()),
+              child: Text('Soal-Masuk')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>ModulIsimodulView()),
+              child: Text('Modul-Isi modul')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>MediapembelajaranArsipView()),
+              child: Text('Media pembelajaran-Arsip')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>MediapembelajaranView()),
+              child: Text('Media pembelajaran')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>MediapembelajaranKomentarView()),
+              child: Text('Media pembelajaran-Komentar')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>MasukanKodeSoalView()),
+              child: Text('Masukan Kode Soal')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>ProfilView()),
+              child: Text('Profil')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>DiskusiSuntingpertanyaanView()),
+              child: Text(
+                'Diskusi-Sunting Pertanyaan "50%"',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 17
+                ),
+              )
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>SoalUraianView()),
+              child: Text('Soal Uraian')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>SoalIsianView()),
+              child: Text('Soal Isian')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>BerandaView()),
+              child: Text('Beranda')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>BerandaNotifView()),
+              child: Text('Beranda Kalau Ada Notif')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>ModulBukamodulRingkasanView()),
+              child: Text(
+                'Modul-Buka Modul Ringkasan "90%"',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 17
+                ),
+              )
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>ModulBukamodulDetailmodulView()),
+              child: Text(
+                'Modul-Buka Modul Detail Modul "90%"',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 17
+                ),
+              )
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>SoalPilganView()),
+              child: Text('Soal Pilgan')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>ReviewsoalPilganSalahView()),
+              child: Text('Review Soal-Pilgan Salah')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>ReviewsoalPilganView()),
+              child: Text('Review Soal-Pilgan')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>AnalisisView()),
+              child: Text('Analisis')
             ),
           ],
         ),
