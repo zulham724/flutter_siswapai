@@ -8,11 +8,7 @@ class AnalisisView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: ''),
     );
   }
 }
@@ -34,17 +30,17 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
 
     var data=[
-      Sales("Sun",50,Colors.red),
-      Sales("Mon",70,Colors.green),
-      Sales("Tue",100,Colors.yellow),
+      Soal("14",50,Colors.red),
+      Soal("3",70,Colors.blue),
+      Soal("30",100,Colors.teal),
     ];
 
     var series=[
       charts.Series(
-        domainFn: (Sales sales,_)=>sales.day,
-        measureFn: (Sales sales,_)=>sales.sold,
-        colorFn: (Sales sales,_)=>sales.color,
-        id:'Sales',
+        domainFn: (Soal soal,_)=>soal.day,
+        measureFn: (Soal soal,_)=>soal.sold,
+        colorFn: (Soal soal,_)=>soal.color,
+        id:'Soal',
         data: data
 
       )
@@ -70,139 +66,154 @@ class _MyHomePageState extends State<MyHomePage> {
         elevation: 0,
       ),
       body: Container(
-        child: Row(
-          children: <Widget>[
-            Column(
+        child: Column(
+          children:[
+            Row(
+              children: <Widget>[
+                Column(
+                  children: [
+                    Container(
+                      margin: EdgeInsets.only(left: 20, top: 20),
+                      child: Text(
+                        'Dari 20 paket soal',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(right: 20),
+                      child: Text(
+                        'yang anda kerjakan',
+                        style: TextStyle(
+                          color: Colors.grey
+                        ),
+                      ),
+                    ),
+                    Row(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(top: 10),
+                          height: 30,
+                          width: 30,
+                          decoration: BoxDecoration(
+                            color: Colors.red,
+                            borderRadius: BorderRadius.circular(100)
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(top: 5),
+                          child: Row(
+                            children: [
+                              Text(
+                                ' 14',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold
+                                ),
+                              ),
+                              Text(
+                                ' nilai sempurna'
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(top: 10),
+                          height: 30,
+                          width: 30,
+                          decoration: BoxDecoration(
+                            color: Colors.blue,
+                            borderRadius: BorderRadius.circular(100)
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(top: 5, right: 35),
+                          child: Row(
+                            children: [
+                              Text(
+                                '  3',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold
+                                ),
+                              ),
+                              Text(
+                                ' nilai tinggi'
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(top: 10),
+                          height: 30,
+                          width: 30,
+                          decoration: BoxDecoration(
+                            color: Colors.teal,
+                            borderRadius: BorderRadius.circular(100)
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(top: 5, right: 25),
+                          child: Row(
+                            children: [
+                              Text(
+                                '  3',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold
+                                ),
+                              ),
+                              Text(
+                                ' nilai rendah'
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    )
+                  ],
+                ),
+                Container(
+                  child: SizedBox(
+                    height:200, 
+                    width: 200, 
+                    child: chart,
+                  ),
+                )
+              ],
+            ),
+            Row(
               children: [
                 Container(
                   margin: EdgeInsets.only(left: 20, top: 20),
                   child: Text(
-                    'Dari 20 paket soal',
+                    'Paket Soal yang kamu kerjakan',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20
                     ),
                   ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(right: 20),
-                  child: Text(
-                    'yang anda kerjakan',
-                    style: TextStyle(
-                      //fontWeight: FontWeight.bold,
-                      //fontSize: 20
-                      color: Colors.grey
-                    ),
-                  ),
-                ),
-                Row(
-                  children: [
-                    Container(
-                      margin: EdgeInsets.only(top: 10),
-                      height: 30,
-                      width: 30,
-                      decoration: BoxDecoration(
-                        color: Colors.red,
-                        borderRadius: BorderRadius.circular(100)
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(top: 5),
-                      child: Row(
-                        children: [
-                          Text(
-                            ' 14',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold
-                            ),
-                          ),
-                          Text(
-                            ' nilai sempurna'
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-                Row(
-                  children: [
-                    Container(
-                      margin: EdgeInsets.only(top: 10),
-                      height: 30,
-                      width: 30,
-                      decoration: BoxDecoration(
-                        color: Colors.green,
-                        borderRadius: BorderRadius.circular(100)
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(top: 5, right: 35),
-                      child: Row(
-                        children: [
-                          Text(
-                            '  3',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold
-                            ),
-                          ),
-                          Text(
-                            ' nilai tinggi'
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-                Row(
-                  children: [
-                    Container(
-                      margin: EdgeInsets.only(top: 10),
-                      height: 30,
-                      width: 30,
-                      decoration: BoxDecoration(
-                        color: Colors.yellow,
-                        borderRadius: BorderRadius.circular(100)
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(top: 5, right: 25),
-                      child: Row(
-                        children: [
-                          Text(
-                            '  3',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold
-                            ),
-                          ),
-                          Text(
-                            ' nilai rendah'
-                          )
-                        ],
-                      ),
-                    )
-                  ],
                 )
               ],
-            ),
-            Container(
-              margin: EdgeInsets.only(bottom: 450),
-              child: SizedBox(
-              height:200, 
-              width: 200, 
-              child: chart,
-            ),
             )
-          ],
+          ]
         ),
       ),
     );
   }
 }
 
-class Sales {
+class Soal {
   final String day;
   final int sold;
   final charts.Color color; 
-  Sales(this.day, this.sold,Color color)
+  Soal(this.day, this.sold,Color color)
   :this.color=charts.Color(r:color.red,g: color.green,b: color.blue,a: color.alpha);
 }

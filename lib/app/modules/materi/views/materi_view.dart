@@ -65,15 +65,29 @@ class MateriView extends GetView<MateriController> {
           Container(
             child: Column(
               children: [
-                Image(
-                  height: 250,
+                Container(
+                  margin: EdgeInsets.only(top: 20),
+                  height: 150,
                   width: 350,
-                  image: AssetImage('assets/images/Card-Modul.png'),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    image: DecorationImage(
+                      image: AssetImage('assets/images/Card-Modul.png'),
+                      fit: BoxFit.fill
+                    )
+                  ),
                 ),
-                Image(
-                  height: 250,
+                Container(
+                  margin: EdgeInsets.only(top: 20),
+                  height: 150,
                   width: 350,
-                  image: AssetImage('assets/images/Card-Media.png'),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    image: DecorationImage(
+                      image: AssetImage('assets/images/Card-Media.png'),
+                      fit: BoxFit.fill
+                    )
+                  ),
                 ),
               ],
             )

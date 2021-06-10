@@ -172,13 +172,7 @@ class HomeView extends GetView<HomeController> {
             ),
             RaisedButton(
               onPressed: ()=>Get.to(()=>DiskusiSuntingpertanyaanView()),
-              child: Text(
-                'Diskusi-Sunting Pertanyaan "50%"',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 17
-                ),
-              )
+              child: Text('Diskusi-Sunting Pertanyaan')
             ),
             RaisedButton(
               onPressed: ()=>Get.to(()=>SoalUraianView()),
@@ -198,23 +192,11 @@ class HomeView extends GetView<HomeController> {
             ),
             RaisedButton(
               onPressed: ()=>Get.to(()=>ModulBukamodulRingkasanView()),
-              child: Text(
-                'Modul-Buka Modul Ringkasan "90%"',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 17
-                ),
-              )
+              child: Text('Modul-Buka Modul Ringkasan')
             ),
             RaisedButton(
               onPressed: ()=>Get.to(()=>ModulBukamodulDetailmodulView()),
-              child: Text(
-                'Modul-Buka Modul Detail Modul "90%"',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 17
-                ),
-              )
+              child: Text('Modul-Buka Modul Detail Modul')
             ),
             RaisedButton(
               onPressed: ()=>Get.to(()=>SoalPilganView()),
@@ -231,6 +213,18 @@ class HomeView extends GetView<HomeController> {
             RaisedButton(
               onPressed: ()=>Get.to(()=>AnalisisView()),
               child: Text('Analisis')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>TantanganHarianView()),
+              child: Text('Tantangan Harian')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>SoalNomorsoalView()),
+              child: Text('Soal-Nomor soal')
+            ),
+            RaisedButton(
+              onPressed: ()=>Get.to(()=>ReviewsoalNomorsoalView()),
+              child: Text('Review Soal-Nomor soal')
             ),
           ],
         ),

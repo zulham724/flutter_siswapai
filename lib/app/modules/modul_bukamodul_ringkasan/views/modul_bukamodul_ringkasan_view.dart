@@ -85,8 +85,50 @@ class ModulBukamodulRingkasanView
                     ],
                   ),
                 ),
+                Row(
+                  children: [
+                    Container(
+                      margin: EdgeInsets.only(top: 10, left: 225),
+                      height: 30,
+                      width: 60,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(50),
+                          topRight: Radius.circular(50)
+                        ),
+                        color: Colors.white
+                      ),
+                      child: Container(
+                        margin: EdgeInsets.only(top: 5),
+                        child: Icon(
+                          Icons.comment,
+                          color: Colors.grey,
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(top: 10, left: 10),
+                      height: 30,
+                      width: 60,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(50),
+                          topRight: Radius.circular(50)
+                        ),
+                        color: Colors.white
+                      ),
+                      child: Container(
+                        margin: EdgeInsets.only(top: 5),
+                        child: Icon(
+                          Icons.favorite_border,
+                          color: Colors.grey,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
                 Container(
-                  margin: EdgeInsets.only(top: 50),
+                  //margin: EdgeInsets.only(top: 50),
                   width: 400,
                   decoration: BoxDecoration(
                     color: Colors.white,
@@ -101,32 +143,12 @@ class ModulBukamodulRingkasanView
                         children: [
                           Container(
                             margin: EdgeInsets.only(left: 250),
-                            child: Icon(
-                              Icons.comment,
-                              color: Colors.grey,
-                              size: 30,
-                            ),
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(left: 30),
-                            child: Icon(
-                              Icons.favorite_border,
-                              color: Colors.grey,
-                              size: 30,
-                            ),
-                          )
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Container(
-                            margin: EdgeInsets.only(left: 260),
                             child: Text(
                               '10'
                             ),
                           ),
                           Container(
-                            margin: EdgeInsets.only(left: 40),
+                            margin: EdgeInsets.only(left: 50),
                             child: Text(
                               '10'
                             ),
@@ -206,7 +228,7 @@ class ModulBukamodulRingkasanView
                         ],
                       ),
                       Container(
-                        margin: EdgeInsets.only(top: 119),
+                        margin: EdgeInsets.only(top: 157),
                         height: 50,
                         width: 110,
                         decoration: BoxDecoration(
