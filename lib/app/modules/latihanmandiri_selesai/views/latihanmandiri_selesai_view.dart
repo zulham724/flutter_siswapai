@@ -534,7 +534,7 @@ class LatihanmandiriSelesaiView
               ),
             ),
             Container(
-              margin: EdgeInsets.only(top: 10),
+              margin: EdgeInsets.only(top: 10, bottom: 20),
               width: 350,
               height: 110,
               decoration: BoxDecoration(

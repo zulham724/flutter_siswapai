@@ -35,7 +35,7 @@ class ModulIsimodulView extends GetView<ModulIsimodulController> {
                 Container(
                   margin: EdgeInsets.only(top: 30, left: 130),
                   child: Icon(
-                    Icons.bookmark,
+                    Icons.bookmark_border,
                     color: Colors.white,
                     size: 30,
                   ),

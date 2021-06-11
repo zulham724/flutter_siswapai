@@ -112,7 +112,7 @@ class NavigasiView extends GetView<NavigasiController> {
               Container(
                 margin: EdgeInsets.only(left: 10, top: 5),
                 child: Icon(
-                  Icons.person,
+                  Icons.format_align_justify_sharp,
                   color: Colors.teal,
                   size: 50
                 )

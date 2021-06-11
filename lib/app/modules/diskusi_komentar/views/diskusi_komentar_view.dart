@@ -69,12 +69,12 @@ class DiskusiKomentarView extends GetView<DiskusiKomentarController> {
                       Container(
                         margin: EdgeInsets.only(left: 20),
                         child: Icon(
-                          Icons.favorite,
+                          Icons.favorite_border,
                           color: Colors.white,
                         )
                       ),
                       Text(
-                        'Like',
+                        ' Like',
                         style: TextStyle(
                           color: Colors.white
                         ),
@@ -232,7 +232,7 @@ class DiskusiKomentarView extends GetView<DiskusiKomentarController> {
                           Container(
                             margin: EdgeInsets.only(right: 180),
                             child: Icon(
-                              Icons.favorite,
+                              Icons.favorite_border,
                               color: Colors.grey,
                             )
                           ),
@@ -344,7 +344,7 @@ class DiskusiKomentarView extends GetView<DiskusiKomentarController> {
                           Container(
                             margin: EdgeInsets.only(right: 180),
                             child: Icon(
-                              Icons.favorite,
+                              Icons.favorite_border,
                               color: Colors.grey,
                             )
                           ),
